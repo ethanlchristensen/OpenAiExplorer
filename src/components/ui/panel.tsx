@@ -1,17 +1,24 @@
 import { Card, Text } from "@radix-ui/themes";
 
-export default function Panel({ title, children }: any) {
+export default function Panel({ title, centered, children }: any) {
     return (
-        <Card variant='surface' className='h-[75vh]'>
+        <Card variant='surface' className='h-[75vh] w-full'>
             <div className='mb-2'>
                 <Text as="div" size="2" weight="bold">
                     {title}
                 </Text>
             </div>
-            {/* <Separator size='4' color='yellow'></Separator> */}
-            <div className='mt-2'>
-                {children}
-            </div>
+            {
+                centered ?
+                    <div className="flex ml-auto mr-auto align-middle justify-center items-center content-center h-full">
+                        {children}
+                    </div>
+                    :
+                    <div>
+                        {children}
+                    </div>
+            }
+
         </Card>
     );
 }

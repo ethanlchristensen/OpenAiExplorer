@@ -6,7 +6,7 @@ import '@radix-ui/themes/styles.css'
 import { Theme } from "@radix-ui/themes";
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  <Theme accentColor='blue' appearance='dark'>
+  <Theme accentColor='purple'>
     <React.StrictMode>
       <App />
     </React.StrictMode>
