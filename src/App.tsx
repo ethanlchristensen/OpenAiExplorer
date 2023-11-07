@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import { ClimbingBoxLoader } from 'react-spinners';
-import { BreedingRhombusSpinner } from 'react-epic-spinners'
+import { SelfBuildingSquareSpinner } from 'react-epic-spinners'
+import Markdown from 'react-markdown'
 
 import NavBar from './components/ui/navbar';
 import Panel from './components/ui/panel';
@@ -33,10 +33,10 @@ function App() {
             {
               responseData?.loading ?
                 <Panel centered={true}>
-                  <BreedingRhombusSpinner
+                  <SelfBuildingSquareSpinner
                     color="#8457AA"
                     // loading={responseData.loading}
-                    size={150}
+                    size={75}
                   // aria-label="Loading Spinner"
                   // data-testid="loader"
                   />
@@ -44,7 +44,7 @@ function App() {
                 :
                 <Panel title="Output">
                   <div className='whitespace-pre-line'>
-                    {responseData.data}
+                    <Markdown>{responseData.data}</Markdown>
                   </div>
                 </Panel>
             }

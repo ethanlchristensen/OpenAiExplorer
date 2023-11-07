@@ -4,7 +4,7 @@ export default function Panel({ title, centered, children }: any) {
     return (
         <Card variant='surface' className='h-[75vh] w-full'>
             <div className='mb-2'>
-                <Text as="div" size="2" weight="bold">
+                <Text as="div" size="4" weight="bold">
                     {title}
                 </Text>
             </div>
@@ -14,7 +14,7 @@ export default function Panel({ title, centered, children }: any) {
                         {children}
                     </div>
                     :
-                    <div>
+                    <div className="overflow-y-auto h-full">
                         {children}
                     </div>
             }

@@ -1,5 +1,5 @@
 import { Button, Heading, Separator } from "@radix-ui/themes";
-import { CodeIcon, SunMoonIcon } from "lucide-react";
+import { GitlabIcon, SunMoonIcon } from "lucide-react";
 
 export default function NavBar() {
     function onChangeMode() {
@@ -16,18 +16,18 @@ export default function NavBar() {
         <nav>
             <div className='h-14 border-purple flex justify-between items-center align-middle'>
                 <div className='mx-4'>
-                    <Heading size='4' color='purple'>OpenAI Explorer</Heading>
+                    <Heading size='7' color='purple'>OpenAI Explorer</Heading>
                 </div>
                 <div className='flex space-x-4 mx-4'>
                     <div>
-                        <Button variant='surface' color='purple' onClick={() => window.open("https://github.com/ethanlchristensen/OpenAiExplorer")}>
-                            <CodeIcon color='purple' strokeWidth={1.25} />
+                        <Button variant='surface' onClick={() => window.open("https://github.com/ethanlchristensen/OpenAiExplorer")}>
+                            <GitlabIcon strokeWidth={1.5} />
                         </Button>
                     </div>
 
                     <div>
-                        <Button variant='surface' color='purple' onClick={onChangeMode}>
-                            <SunMoonIcon color='purple' strokeWidth={1.25} />
+                        <Button variant='surface' onClick={onChangeMode}>
+                            <SunMoonIcon strokeWidth={1.5} />
                         </Button>
                     </div>
 
